@@ -1,0 +1,9 @@
+<h1>Главная</h1>
+<?php if(isset($this->currentUser) && $this->currentUser):?>
+<h3>Информация о пользователе.</h3>
+<p>Имя: <?php echo $this->escape($this->currentUser['name'])?></p>
+<p>Логин: <?php echo $this->escape($this->currentUser['login'])?></p>
+<p>Email: <?php echo $this->escape($this->currentUser['email'])?></p>
+<?php else:?>
+<p>Войдите на сайт или зарегистрируйтесь.</p>
+<?php endif; ?>
